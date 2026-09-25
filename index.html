@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkPay VIP</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f8fb;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .logo {
+      width: 280px;
+      display: block;
+      margin: 20px auto 50px;
+      border-radius: 25px;
+    }
+
+    input {
+      width: 100%;
+      padding: 18px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      font-size: 17px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 18px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 30px;
+      background: #129566;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .register {
+      background: white;
+      color: #129566;
+      border: 2px solid #129566;
+    }
+
+    #message {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- अपना लोगो यहाँ लगाएँ -->
+  <img class="logo" src="logo.jpg" alt="LinkPay VIP">
+
+  <h2>LinkPay VIP</h2>
+
+  <input
+    type="tel"
+    id="phone"
+    placeholder="Phone Number"
+  >
+
+  <input
+    type="password"
+    id="password"
+    placeholder="Password"
+  >
+
+  <input
+    type="password"
+    id="pin"
+    maxlength="6"
+    placeholder="6-digit PIN"
+  >
+
+  <button onclick="login()">Sign In</button>
+
+  <button class="register" onclick="register()">
+    Register
+  </button>
+
+  <div id="message"></div>
+
+</div>
+
+<script>
+
+function login() {
+
+  const phone =
+    document.getElementById("phone").value;
+
+  const password =
+    document.getElementById("password").value;
+
+  const pin =
+    document.getElementById("pin").value;
+
+  if (!phone  !password  !pin) {
+    document.getElementById("message").innerText =
+      "कृपया सभी जानकारी भरें।";
+    return;
+  }
+
+  document.getElementById("message").innerText =
+    "Demo login successful.";
+
+  // असली वेबसाइट में यहाँ
+  // secure server/API से authentication करें।
+}
+
+function register() {
+
+  document.getElementById("message").innerText =
+    "Registration page खोलें।";
+}
+
+</script>
+
+</body>
+</html>
